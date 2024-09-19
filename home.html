@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!--Daisy ui and tailwind css cdn-->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <main class="flex h-screen justify-center items-center">
+    <div class="mockup-phone">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-3">
+          <div class="stats shadow">
+            <div class="stat">
+
+              <div id="current-balance" class="stat-value text-center">0</div>
+              <div class="stat-desc text-center text-lg font-semibold">Current Balance</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <!--BUTTONS-->
+          <div class="flex gap-5">
+            <button id="add-money-primary-btn"
+              class="btn btn-primary btn-outline btn-xs sm:btn-sm md:btn-md lg:btn-lg">Add Money</button>
+            <button id="cashout-primary-btn"
+              class="btn btn-outline btn-secondary btn-xs sm:btn-sm md:btn-md lg:btn-lg">Cashout</button>
+          </div>
+          <div class="divider"></div>
+
+
+          <!--add money section-->
+          <div id="add-money-section" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Ammount</span>
+                </label>
+                <input id="add-money-ammount" type="text" placeholder="Write ammount" class="input input-bordered"
+                  required autocomplete="off" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="pin-number" type="password" placeholder="Your pin" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                </label>
+              </div>
+              <div  id="message" class="text-blue-400 font-semibold"></div>
+              <div class="form-control mt-6">
+                <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+
+          <!--Cashout section-->
+          <div id="cashout-section" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Ammount</span>
+                </label>
+                <input id="cashout-ammount" type="text" placeholder="Write ammount" class="input input-bordered"
+                  required autocomplete="off" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="pin-number2" type="password" placeholder="Your pin" class="input input-bordered" required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot pin?</a>
+                </label>
+              </div>
+              <div  id="message2" class="text-pink-500 font-semibold"></div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-secondary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script src="./JS/home.js"></script>
+ 
+</body>
+
+</html>
